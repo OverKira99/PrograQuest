@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Cuál es la salida del siguiente código en Java?"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+
+    <TextView
+        android:id="@+id/textViewCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="if (x > 10) { System.out.println('Mayor que 10'); }"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/code_background"
+        android:padding="8dp" />
+
+
+    <ImageView
+        android:id="@+id/imageViewQuestionImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButtonAnswer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="a) Mayor que 10" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAnswer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="b) Menor que 10" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAnswer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="c) Error de sintaxis" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar Respuesta"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

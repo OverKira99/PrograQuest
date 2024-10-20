@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Imagen de perfil -->
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/profile"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop"
+            android:contentDescription="Profile Image" />
+
+        <!-- Botón para seleccionar la imagen -->
+        <Button
+            android:id="@+id/buttonSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Imagen"
+            android:layout_marginBottom="24dp" />
+
+        <!-- EditText para el correo electrónico -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- EditText para la contraseña -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- EditText para confirmar la contraseña -->
+        <EditText
+            android:id="@+id/editTextConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar contraseña"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botón de registro -->
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrarse"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</ScrollView>
