@@ -23,7 +23,7 @@ public class LoadScreenActivity extends AppCompatActivity {
             // pasa a la siguiente activity
             startActivity(new Intent(LoadScreenActivity.this, LoginActivity.class));
             finish(); // Cerrar la SplashActivity
-        }, 2000);
+        }, 200);
     }
 
 }
