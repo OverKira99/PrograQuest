@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="topics_array">
+        <item>IF</item>
+        <item>WHILE</item>
+        <item>FOR</item>
+        <item>SWITCH</item>
+    </string-array>
+</resources>

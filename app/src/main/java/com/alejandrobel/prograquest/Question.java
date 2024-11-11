@@ -32,6 +32,8 @@ public class Question {
         this.topic = topic;
     }
 
+
+
     // Getters y setters
     public int getId() {
         return id;

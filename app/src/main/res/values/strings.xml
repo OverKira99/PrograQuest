@@ -8,12 +8,7 @@
     <string name="cambiar_imagen">Cambiar imagen</string>
     <string name="profile_image">Profile Image</string>
     <string name="large_text">
-     <string-array name="topics_array">
-         <item>IF</item>
-         <item>WHILE</item>
-         <item>FOR</item>
-         <item>SWITCH</item>
-     </string-array>
+
         "Material is the metaphor.\n\n"
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."

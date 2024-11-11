@@ -2,17 +2,27 @@ package com.alejandrobel.prograquest;
 
 import android.content.Context;
 
-import androidx.room.Database;
-import androidx.room.RoomDatabase;
-import androidx.room.Room;
-import androidx.sqlite.db.SupportSQLiteDatabase;
-import androidx.annotation.NonNull;
+import android.content.Context;
 
-@Database(entities = {Question.class, Score.class}, version = 1)
+import androidx.annotation.NonNull;
+import androidx.room.Database;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+
+import com.alejandrobel.prograquest.QuestionDao;
+import com.alejandrobel.prograquest.ScoreDao;
+import com.alejandrobel.prograquest.Question;
+import com.alejandrobel.prograquest.Score;
+import com.alejandrobel.prograquest.JsonHelper;
+
+import java.util.List;
+
+@Database(entities = {Question.class, Score.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     public abstract QuestionDao questionDao();
-    public abstract ScoreDao scoreDao();
+    public abstract ScoreDao scoreDao();  // Incluimos el ScoreDao
 
     private static volatile AppDatabase INSTANCE;
 
@@ -22,8 +32,8 @@ public abstract class AppDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                                     AppDatabase.class, "app_database")
-                            .addCallback(roomCallback) // Llama a la función de carga inicial
-                            .allowMainThreadQueries() // Evitar esto en producción
+                            .addCallback(roomCallback)
+                            .fallbackToDestructiveMigration()
                             .build();
                 }
             }
@@ -36,16 +46,19 @@ public abstract class AppDatabase extends RoomDatabase {
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
             new Thread(() -> {
-                // Insertar preguntas iniciales
-                populateDatabase(INSTANCE.questionDao());
+                populateDatabase(INSTANCE.questionDao(), contextInstance);
             }).start();
         }
     };
 
-    private static void populateDatabase(QuestionDao questionDao) {
-        // Preguntas de ejemplo
+    private static void populateDatabase(QuestionDao questionDao, Context context) {
+        List<Question> questions = JsonHelper.loadQuestionsFromJson(context);
+        questionDao.insertAll(questions);
+    }
 
+    private static Context contextInstance;
 
-
+    public static void initializeContext(Context context) {
+        contextInstance = context.getApplicationContext();
     }
 }
