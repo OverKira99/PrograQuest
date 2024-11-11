@@ -6,12 +6,16 @@
     tools:context=".ProfileFragment">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:paddingTop="48dp"
+        android:padding="16dp"
+        android:gravity="center"
+      >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
             android:orientation="vertical"
             android:gravity="center">
 
@@ -20,14 +24,14 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
 
-                android:contentDescription="Imagen de perfil"
+                android:contentDescription="@string/imagen_de_perfil"
                 android:layout_marginBottom="16dp" />
 
             <TextView
                 android:id="@+id/textViewEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Correo del usuario"
+                android:text="@string/correo_del_usuario"
                 android:layout_marginBottom="16dp"
                 android:textSize="18sp" />
 
@@ -36,21 +40,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/blue"
-                android:text="Cambiar Imagen"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/cambiar_imagen"
                 android:layout_marginBottom="16dp" />
 
             <Switch
                 android:id="@+id/switchTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Modo Oscuro"
+                android:text="@string/modo_oscuro"
                 android:layout_marginBottom="16dp" />
 
             <Button
                 android:id="@+id/buttonLeaderboard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ver Tabla de Clasificaciones"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/ver_tabla_de_clasificaciones"
                 android:backgroundTint="@color/blue"
                 android:layout_marginBottom="16dp" />
 
@@ -58,8 +66,10 @@
                 android:id="@+id/buttonLogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
                 android:backgroundTint="@color/blue"
-                android:text="Cerrar Sesión" />
+                android:text="@string/cerrar_sesi_n" />
         </LinearLayout>
     </ScrollView>
 

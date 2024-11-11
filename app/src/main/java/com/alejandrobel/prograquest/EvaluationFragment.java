@@ -76,4 +76,3 @@ public class EvaluationFragment extends Fragment {
         db.scoreDao().insert(score);
     }
 }
-}

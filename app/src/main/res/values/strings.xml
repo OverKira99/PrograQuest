@@ -103,4 +103,9 @@
     <string name="opci_n_3">Opción 3</string>
     <string name="opci_n_2">Opción 2</string>
     <string name="opci_n_1">Opción 1</string>
+    <string name="imagen_de_perfil">Imagen de perfil</string>
+    <string name="correo_del_usuario">Correo del usuario</string>
+    <string name="modo_oscuro">Modo Oscuro</string>
+    <string name="ver_tabla_de_clasificaciones">Ver Tabla de Clasificaciones</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
 </resources>
