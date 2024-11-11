@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1076229684452",
+    "project_id": "prograquest",
+    "storage_bucket": "prograquest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076229684452:android:adb454c0262368359300f1",
+        "android_client_info": {
+          "package_name": "com.alejandrobel.prograquest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnEEs2Xb1f6p-gQZtRWwgoLYYMGs-D-WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
