@@ -36,8 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="1. Introducción
-Los bucles while permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición. Son útiles cuando el número de iteraciones no está definido de antemano, ya que dependen de la evaluación continua de una condición lógica."
+                android:text="@string/_1_introducci_n_los_bucles_while_permiten_ejecutar_un_bloque_de_c_digo_repetidamente_mientras_se_cumpla_una_condici_n_son_tiles_cuando_el_n_mero_de_iteraciones_no_est_definido_de_antemano_ya_que_dependen_de_la_evaluaci_n_continua_de_una_condici_n_l_gica"
                  android:textSize="16sp" />
 
             <androidx.constraintlayout.widget.Barrier
@@ -49,8 +48,7 @@ Los bucles while permiten ejecutar un bloque de código repetidamente mientras s
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="2. Bucle while en Java
-En Java, la estructura del bucle while es la siguiente:"
+                android:text="@string/_2_bucle_while_en_java_en_java_la_estructura_del_bucle_while_es_la_siguiente"
                 android:textSize="16sp" />
 
 
@@ -64,7 +62,7 @@ En Java, la estructura del bucle while es la siguiente:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="En este ejemplo, el bucle se ejecuta mientras la variable i sea menor que 5. En cada iteración, el valor de i se incrementa, asegurando que eventualmente la condición se vuelva falsa."
+                android:text="@string/en_este_ejemplo_el_bucle_se_ejecuta_mientras_la_variable_i_sea_menor_que_5_en_cada_iteraci_n_el_valor_de_i_se_incrementa_asegurando_que_eventualmente_la_condici_n_se_vuelva_falsa"
                 android:textSize="16sp" />
 
 
@@ -72,19 +70,14 @@ En Java, la estructura del bucle while es la siguiente:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Errores comunes en Java:
-
-Olvidar actualizar la condición dentro del bucle: Esto puede causar bucles infinitos.
-Definir mal la condición inicial: Si la condición es falsa desde el inicio, el bucle no se ejecutará.
-Acceder a variables no inicializadas: Asegúrate de declarar e inicializar las variables antes de usarlas en la condición."
+                android:text="@string/errores_comunes_en_java_olvidar_actualizar_la_condici_n_dentro_del_bucle_esto_puede_causar_bucles_infinitos_definir_mal_la_condici_n_inicial_si_la_condici_n_es_falsa_desde_el_inicio_el_bucle_no_se_ejecutar_acceder_a_variables_no_inicializadas_aseg_rate_de_declarar_e_inicializar_las_variables_antes_de_usarlas_en_la_condici_n"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="3. Bucle while en Python
-En Python, la estructura del bucle while es similar pero más concisa:"
+                android:text="@string/_3_bucle_while_en_python_en_python_la_estructura_del_bucle_while_es_similar_pero_m_s_concisa"
                  android:textSize="16sp" />
 
 
@@ -98,18 +91,14 @@ En Python, la estructura del bucle while es similar pero más concisa:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-               android:text="En este ejemplo, el bucle se ejecuta mientras la condición i < 5 sea verdadera. La variable i se incrementa en cada iteración, evitando un bucle infinito."
+               android:text="@string/en_este_ejemplo_el_bucle_se_ejecuta_mientras_la_condici_n_i_5_sea_verdadera_la_variable_i_se_incrementa_en_cada_iteraci_n_evitando_un_bucle_infinito"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Errores comunes en Python:
-
-Olvidar actualizar la condición: Al igual que en Java, esto puede llevar a bucles infinitos.
-Indentación incorrecta: Python requiere una indentación consistente; de lo contrario, se generará un IndentationError.
-Falta del carácter : en la declaración del while: Esto producirá un SyntaxError."
+                android:text="@string/errores_comunes_en_python_olvidar_actualizar_la_condici_n_al_igual_que_en_java_esto_puede_llevar_a_bucles_infinitos_indentaci_n_incorrecta_python_requiere_una_indentaci_n_consistente_de_lo_contrario_se_generar_un_indentationerror_falta_del_car_cter_en_la_declaraci_n_del_while_esto_producir_un_syntaxerror"
                 android:textSize="16sp" />
             <TextView
                 android:layout_width="match_parent"
@@ -122,20 +111,14 @@ Falta del carácter : en la declaración del while: Esto producirá un SyntaxErr
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-               android:text="En Java, los errores más comunes incluyen:
-•  Olvidar incrementar o modificar la variable de control puede resultar en un bucle infinito.
-•  Definir mal la condición puede evitar que el bucle se ejecute.En Python, los errores frecuentes son:
-"
+               android:text="@string/en_java_los_errores_m_s_comunes_incluyen_olvidar_incrementar_o_modificar_la_variable_de_control_puede_resultar_en_un_bucle_infinito_definir_mal_la_condici_n_puede_evitar_que_el_bucle_se_ejecute_en_python_los_errores_frecuentes_son"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="En Python, los errores frecuentes son:
-•  La falta de una correcta indentación o el uso de diferentes tabulaciones puede generar errores.
-•  Si se olvida actualizar la condición, el programa puede quedar atrapado en un bucle infinito.
-"
+                android:text="@string/en_python_los_errores_frecuentes_son_la_falta_de_una_correcta_indentaci_n_o_el_uso_de_diferentes_tabulaciones_puede_generar_errores_si_se_olvida_actualizar_la_condici_n_el_programa_puede_quedar_atrapado_en_un_bucle_infinito"
                 android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
