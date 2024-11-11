@@ -115,4 +115,7 @@
     <string name="ver_tabla_de_clasificaciones">Ver Tabla de Clasificaciones</string>
     <string name="cerrar_sesi_n">Cerrar Sesión</string>
     <string name="sentencias_condicionales_for">Sentencias Condicionales FOR</string>
+    <string name="sentencias_condicionales_while">Sentencias Condicionales WHILE</string>
+    <string name="sentencias_condicionales_swich">Sentencias Condicionales SWICH</string>
+    <string name="sentencias_condicionales_if">Sentencias Condicionales IF</string>
 </resources>

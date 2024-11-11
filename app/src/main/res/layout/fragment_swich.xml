@@ -1,13 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SwichFragment">
+    android:background="@color/lessiones"
+    tools:context=".SwitchFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/sentencias_condicionales_swich"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:barrierDirection="top" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+               android:text="1. Introducción
+La sentencia switch se utiliza para seleccionar entre múltiples bloques de código basados en el valor de una expresión. Es una alternativa más limpia y eficiente que usar múltiples sentencias if-else encadenadas cuando se manejan múltiples condiciones basadas en el mismo valor.
+
+"
+                android:textSize="16sp" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+             android:text="2. Sentencia switch en Java
+En Java, la estructura de un switch es la siguiente:"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/swchi_java" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="El bloque de código dentro del if se ejecutará solo si la condición lógica evaluada entre paréntesis es true. Por ejemplo, si declaramos una variable int x = 10; y comprobamos if (x > 5), el mensaje asociado se imprimirá porque la condición es verdadera."
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Un error común en Java es omitir los paréntesis () en la condición, lo que generará un error de compilación. Otro problema puede surgir si no se utilizan llaves {} cuando el bloque contiene más de una línea de código; en este caso, solo la primera línea se considerará dentro del if, lo que puede causar comportamientos inesperados."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="3. Sentencia if en Python
+En Python, la sentencia if tiene una estructura más concisa:
+"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/if_python" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Aquí no es obligatorio usar paréntesis alrededor de la condición, aunque se permiten. El bloque de código se define mediante la indentación, lo que mejora la legibilidad. Por ejemplo, si se declara x = 10 y luego se evalúa if x > 5:, el mensaje se imprimirá porque la condición es verdadera."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Un error común en Python es no respetar la indentación, lo que genera un IndentationError. Además, si se olvida usar : al final de la línea if, se obtendrá un error de sintaxis. Es crucial mantener una indentación consistente en todo el bloque, ya que incluso un espacio o tabulación extra puede generar errores."
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text=""
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="En Java, errores comunes incluyen:
+•	No usar paréntesis () en la condición.
+•	Omitir las llaves {} en bloques con múltiples líneas.
+"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="En Python, los errores más frecuentes son:
+•	Indentación inconsistente o ausente.
+•	Falta del carácter : después de la condición.
+•	Mezclar espacios y tabulaciones en la indentación.
+"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.core.widget.NestedScrollView>
