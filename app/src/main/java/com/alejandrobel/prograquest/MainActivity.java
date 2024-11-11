@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -22,32 +23,33 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bnvNavigation = findViewById(R.id.bottom_navigation);
 
-        // Barra de navegacion
-        bnvNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
-                int itemId = item.getItemId();
-                if (itemId == R.id.nav_lessons) {
-                    startActivity(new Intent(MainActivity.this, LessonActivity.class));
-                    return true;
-                } else if (itemId == R.id.nav_evaluation) {
-                    startActivity(new Intent(MainActivity.this, EvaluationActivity.class));
-                    return true;
-                } else if (itemId == R.id.nav_profile) {
-                    startActivity(new Intent(MainActivity.this, ProfileActivity.class));
-                    return true;
-                } else {
-                    return false;
+        bnvNavigation = findViewById(R.id.bottom_navigation);
+
+        bnvNavigation.setOnItemSelectedListener(item -> {
+                Fragment selectedFragment = null;
+
+                if (item.getItemId() == R.id.nav_lessons) {
+                    selectedFragment = new LessonFragment();
+                } else if (item.getItemId() == R.id.nav_evaluation) {
+                    selectedFragment = new EvaluationFragment();
+                } else if (item.getItemId() == R.id.nav_profile) {
+                    selectedFragment = new ProfileFragment();
                 }
+
+                if (selectedFragment != null) {
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_frame, selectedFragment)
+                            .commit();
+                }
+
+                return true;
+            });
+
+            // Cargar el fragmento inicial si no hay un estado guardado
+            if (savedInstanceState == null) {
+                bnvNavigation.setSelectedItemId(R.id.nav_lessons);
             }
-        });
-
-        // mostrar primero la activity lessons
-        bnvNavigation.setSelectedItemId(R.id.nav_lessons);
-    }
-
-    private void loadActivity(Class<?> activityClass) {
-        startActivity(new Intent(MainActivity.this, activityClass));
-    }
+        }
 }
 
