@@ -14,6 +14,11 @@ public class Question {
     private String option2;
     private String option3;
     private String correctOption;
+    private String topic;
+
+    // Getters y setters para topic
+    public String getTopic() { return topic; }
+    public void setTopic(String topic) { this.topic = topic; }
 
     // Getters y setters
     public int getId() { return id; }

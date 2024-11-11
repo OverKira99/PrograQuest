@@ -1,28 +1,26 @@
 package com.alejandrobel.prograquest;
 
 import android.os.Bundle;
-
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.room.Room;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.util.List;
 
 public class EvaluationFragment extends Fragment {
+
     private AppDatabase db;
     private Question currentQuestion;
     private TextView textViewQuestion, textViewCode;
     private RadioGroup radioGroupAnswers;
     private RadioButton radioButtonAnswer1, radioButtonAnswer2, radioButtonAnswer3;
     private Button buttonSubmit;
+    private Spinner spinnerSelectTopic;
+    private String selectedTopic = "IF"; // Tema predeterminado
 
     @Nullable
     @Override
@@ -40,8 +38,21 @@ public class EvaluationFragment extends Fragment {
         radioButtonAnswer2 = view.findViewById(R.id.radioButtonAnswer2);
         radioButtonAnswer3 = view.findViewById(R.id.radioButtonAnswer3);
         buttonSubmit = view.findViewById(R.id.buttonSubmit);
+        spinnerSelectTopic = view.findViewById(R.id.spinnerSelectTopic);
 
-        loadQuestionData(1);
+        // Configurar Spinner
+        spinnerSelectTopic.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedTopic = parent.getItemAtPosition(position).toString();
+                loadQuestionData(selectedTopic);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // No hacer nada
+            }
+        });
 
         buttonSubmit.setOnClickListener(v -> {
             int selectedId = radioGroupAnswers.getCheckedRadioButtonId();
@@ -49,7 +60,7 @@ public class EvaluationFragment extends Fragment {
 
             if (selectedRadioButton != null && selectedRadioButton.getText().toString().equals(currentQuestion.getCorrectOption())) {
                 Toast.makeText(getContext(), "Correcto", Toast.LENGTH_SHORT).show();
-                saveScore(10);
+                saveScore(10); // Ejemplo de puntaje
             } else {
                 Toast.makeText(getContext(), "Incorrecto", Toast.LENGTH_SHORT).show();
             }
@@ -58,9 +69,10 @@ public class EvaluationFragment extends Fragment {
         return view;
     }
 
-    private void loadQuestionData(int id) {
-        currentQuestion = db.questionDao().getQuestionById(id);
-        if (currentQuestion != null) {
+    private void loadQuestionData(String topic) {
+        List<Question> questions = db.questionDao().getQuestionsByTopic(topic);
+        if (!questions.isEmpty()) {
+            currentQuestion = questions.get(0); // Mostrar la primera pregunta del tema seleccionado
             textViewQuestion.setText(currentQuestion.getQuestion());
             textViewCode.setText(currentQuestion.getCodeExample());
             radioButtonAnswer1.setText(currentQuestion.getOption1());
@@ -73,6 +85,7 @@ public class EvaluationFragment extends Fragment {
         Score score = new Score();
         score.setUserName("Usuario");
         score.setScore(scoreValue);
+        score.setTopic(selectedTopic);
         db.scoreDao().insert(score);
     }
 }

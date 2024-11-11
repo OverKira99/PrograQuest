@@ -4,11 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/blue">
 
-    <!-- RecyclerView para la tabla de clasificación -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewLeaderboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
+        <!-- Título de la sección -->
+        <TextView
+            android:id="@+id/textViewLeaderboardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tabla de Clasificación"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Filtro por tema -->
+        <Spinner
+            android:id="@+id/spinnerTopics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:entries="@array/topics_array" />
+
+        <!-- Lista de puntajes -->
+        <ListView
+            android:id="@+id/listViewScores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:padding="8dp" />
 </LinearLayout>

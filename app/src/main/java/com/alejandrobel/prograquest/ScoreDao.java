@@ -11,6 +11,6 @@ public interface ScoreDao {
     @Insert
     void insert(Score score);
 
-    @Query("SELECT * FROM scores ORDER BY score DESC")
-    List<Score> getAllScores();
+    @Query("SELECT * FROM scores WHERE topic = :topic ORDER BY score DESC")
+    List<Score> getScoresByTopic(String topic);
 }

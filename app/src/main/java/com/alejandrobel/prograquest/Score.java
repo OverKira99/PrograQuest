@@ -2,7 +2,6 @@ package com.alejandrobel.prograquest;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
 @Entity(tableName = "scores")
 public class Score {
 
@@ -11,6 +10,7 @@ public class Score {
 
     private String userName;
     private int score;
+    private String topic; // Nuevo campo para filtrar por tema
 
     // Getters y setters
     public int getId() { return id; }
@@ -21,4 +21,7 @@ public class Score {
 
     public int getScore() { return score; }
     public void setScore(int score) { this.score = score; }
+
+    public String getTopic() { return topic; }
+    public void setTopic(String topic) { this.topic = topic; }
 }

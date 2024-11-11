@@ -1,63 +1,60 @@
 package com.alejandrobel.prograquest;
 
 import android.os.Bundle;
-import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-
-import java.util.ArrayList;
+import androidx.room.Room;
 import java.util.List;
 
 public class LeaderboardActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerViewLeaderboard;
-    private LeaderboardAdapter leaderboardAdapter;
-    private FirebaseFirestore db;
-    private List<ResultModel> resultsList = new ArrayList<>();
+    private AppDatabase db;
+    private ListView listViewScores;
+    private Spinner spinnerTopics;
+    private ArrayAdapter<String> listAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
 
-        // Enlazar RecyclerView
-        recyclerViewLeaderboard = findViewById(R.id.recyclerViewLeaderboard);
-        recyclerViewLeaderboard.setLayoutManager(new LinearLayoutManager(this));
+        db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "app_database")
+                .allowMainThreadQueries()
+                .build();
 
-        // Inicializar Firestore
-        db = FirebaseFirestore.getInstance();
+        listViewScores = findViewById(R.id.listViewScores);
+        spinnerTopics = findViewById(R.id.spinnerTopics);
 
-        // Cargar la tabla de clasificación
-        loadLeaderboardData();
+        // Configurar el spinner
+        spinnerTopics.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedTopic = parent.getItemAtPosition(position).toString();
+                loadScores(selectedTopic);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // No hacer nada
+            }
+        });
     }
 
-    private void loadLeaderboardData() {
-        db.collection("results")
-                .orderBy("score", Query.Direction.DESCENDING) // Ordenar por puntaje descendente
-                .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    resultsList.clear();
-                    for (DocumentSnapshot document : queryDocumentSnapshots.getDocuments()) {
-                        ResultModel result = document.toObject(ResultModel.class);
-                        resultsList.add(result);
-                    }
+    private void loadScores(String topic) {
+        List<Score> scores = db.scoreDao().getScoresByTopic(topic);
+        String[] scoreEntries = new String[scores.size()];
 
-                    leaderboardAdapter = new LeaderboardAdapter(resultsList);
-                    recyclerViewLeaderboard.setAdapter(leaderboardAdapter);
-                })
-                .addOnFailureListener(e -> {
-                    Toast.makeText(LeaderboardActivity.this, "Error al cargar clasificación", Toast.LENGTH_SHORT).show();
-                });
+        for (int i = 0; i < scores.size(); i++) {
+            Score score = scores.get(i);
+            scoreEntries[i] = score.getUserName() + ": " + score.getScore();
+        }
+
+        listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, scoreEntries);
+        listViewScores.setAdapter(listAdapter);
     }
 }

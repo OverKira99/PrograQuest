@@ -1,63 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".EvaluationFragment">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="32dp"
+    android:padding="16dp">
 
-    <LinearLayout
+    <!-- Filtro por tema -->
+    <Spinner
+        android:id="@+id/spinnerSelectTopic"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:entries="@array/topics_array" />
 
-        <TextView
-            android:id="@+id/textViewQuestion"
-            android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pregunta"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textViewCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Código de ejemplo"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonAnswer1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pregunta"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:text="Opción 1" />
 
-        <TextView
-            android:id="@+id/textViewCode"
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/radioButtonAnswer2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Código de ejemplo"
-            android:layout_marginBottom="8dp" />
+            android:text="Opción 2" />
 
-        <RadioGroup
-            android:id="@+id/radioGroupAnswers"
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/radioButtonAnswer3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
+            android:text="Opción 3" />
+    </RadioGroup>
 
-            <RadioButton
-                android:id="@+id/radioButtonAnswer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/opci_n_1" />
-
-            <RadioButton
-                android:id="@+id/radioButtonAnswer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/opci_n_2" />
-
-            <RadioButton
-                android:id="@+id/radioButtonAnswer3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/opci_n_3" />
-        </RadioGroup>
-
-        <Button
-            android:id="@+id/buttonSubmit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/blue"
-            android:text="@string/enviar" />
-    </LinearLayout>
-
-</FrameLayout>
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Enviar" />
+</LinearLayout>

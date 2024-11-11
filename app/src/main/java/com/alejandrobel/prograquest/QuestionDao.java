@@ -11,6 +11,10 @@ public interface QuestionDao {
     @Insert
     void insert(Question question);
 
+    @Query("SELECT * FROM questions WHERE topic = :topic")
+    List<Question> getQuestionsByTopic(String topic);
+
+
     @Query("SELECT * FROM questions WHERE id = :id")
     Question getQuestionById(int id);
 
