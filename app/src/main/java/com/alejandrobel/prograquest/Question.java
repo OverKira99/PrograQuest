@@ -1,6 +1,5 @@
 package com.alejandrobel.prograquest;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -18,7 +17,11 @@ public class Question {
     private String correctOption;
     private String topic; // Campo para almacenar el tema
 
-    // Constructor
+    // Constructor vacío requerido por Room y Gson
+    public Question() {
+    }
+
+    // Constructor completo
     public Question(String question, String codeExample, String option1, String option2, String option3, String correctOption, String topic) {
         this.question = question;
         this.codeExample = codeExample;

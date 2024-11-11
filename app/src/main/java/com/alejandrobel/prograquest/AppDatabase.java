@@ -44,8 +44,8 @@ public abstract class AppDatabase extends RoomDatabase {
 
     private static void populateDatabase(QuestionDao questionDao) {
         // Preguntas de ejemplo
-        questionDao.insert(new Question("¿Qué hace un bucle IF?", "", "Controla una condición", "Repite un bloque", "Define un método", "Controla una condición", "IF"));
-        questionDao.insert(new Question("¿Qué hace un bucle FOR?", "", "Repite un bloque un número determinado de veces", "Evalúa una condición", "Llama a una función", "Repite un bloque un número determinado de veces", "FOR"));
-        questionDao.insert(new Question("¿Qué hace SWITCH?", "", "Evalúa varias condiciones", "Repite un bloque de código", "Termina un programa", "Evalúa varias condiciones", "SWITCH"));
+
+
+
     }
 }
