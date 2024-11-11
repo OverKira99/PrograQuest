@@ -14,7 +14,7 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="251dp"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logO" />
 
     <TextView
         android:id="@+id/login_title"
