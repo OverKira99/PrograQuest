@@ -1,13 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lessiones"
     tools:context=".ForFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/sentencias_condicionales_for"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:barrierDirection="top" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="1. Introducción
+Los bucles for permiten iterar sobre un conjunto de elementos o realizar una serie de operaciones repetitivas un número definido de veces. Son herramientas clave para automatizar tareas y recorrer estructuras de datos como listas, arreglos o rangos.
+"
+                android:textSize="16sp" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:barrierDirection="top" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="2. Bucle for en Java
+En Java, el bucle for tiene una estructura más tradicional y explícita:
+"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/for_java" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Este bucle inicializa una variable (i = 0), verifica la condición (i < 5), y ejecuta el bloque de código incrementando la variable (i++) en cada iteración."
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Un error común en Java es olvidarse de actualizar la variable de control, lo que puede provocar un bucle infinito. Otro error frecuente es definir mal la condición, lo que podría resultar en iteraciones inesperadas o en que el bucle no se ejecute."
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="3. Bucle for en Python
+En Python, el bucle for es más flexible y se utiliza principalmente para iterar sobre secuencias (listas, rangos, etc.):
+"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/for_python" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Aquí, range(5) genera una secuencia de números del 0 al 4, y i toma cada valor en cada iteración."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="En Python, un error común es intentar modificar la secuencia directamente dentro del bucle, lo que puede llevar a resultados inesperados. Además, al igual que con el if, se debe mantener una indentación consistente; de lo contrario, se generará un IndentationError."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text=""
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="En Java, los errores más comunes incluyen:
+
+Olvidar actualizar la variable de control, generando un bucle infinito.
+Configurar incorrectamente la condición, lo que puede llevar a iteraciones no deseadas."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="En Python, los errores frecuentes son:
+
+No usar la función range() correctamente.
+Mezclar espacios y tabulaciones en la indentación.
+Intentar modificar la secuencia sobre la que se está iterando."
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.core.widget.NestedScrollView>
