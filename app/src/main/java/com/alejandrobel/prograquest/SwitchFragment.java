@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-class SwitchFragment extends Fragment {
+public   class SwitchFragment extends Fragment {
 
     @Nullable
     @Override

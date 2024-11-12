@@ -10,12 +10,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.storage.FirebaseStorage;
@@ -38,12 +34,12 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-
+        // Inicializar Firebase Authentication y Storage
         mAuth = FirebaseAuth.getInstance();
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
-
+        // Enlazar vistas
         imageProfile = findViewById(R.id.imageProfile);
         buttonSelectImage = findViewById(R.id.buttonSelectImage);
         editTextEmail = findViewById(R.id.editTextEmail);
@@ -100,12 +96,13 @@ public class RegisterActivity extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        // Subir imagen de perfil a Firebase Storage
+                        // Subir imagen de perfil a Firebase Storage si se seleccionó una
                         if (imageUri != null) {
                             uploadProfileImage();
                         } else {
                             progressBar.setVisibility(View.GONE);
                             Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                            redirectToMainActivity();
                         }
                     } else {
                         progressBar.setVisibility(View.GONE);
@@ -117,21 +114,25 @@ public class RegisterActivity extends AppCompatActivity {
     // Método para subir la imagen de perfil a Firebase Storage
     private void uploadProfileImage() {
         if (imageUri != null) {
-            // Referencia a donde se almacenará la imagen de perfil en Firebase Storage
             StorageReference fileReference = storageReference.child("profile_images/" + mAuth.getCurrentUser().getUid() + ".jpg");
 
             fileReference.putFile(imageUri)
-                    .addOnSuccessListener(taskSnapshot -> {
-                        fileReference.getDownloadUrl().addOnSuccessListener(uri -> {
-                            // Aquí puedes almacenar la URL de la imagen en la base de datos si es necesario
-                            progressBar.setVisibility(View.GONE);
-                            Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-                        });
-                    })
+                    .addOnSuccessListener(taskSnapshot -> fileReference.getDownloadUrl().addOnSuccessListener(uri -> {
+                        progressBar.setVisibility(View.GONE);
+                        Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                        redirectToMainActivity();
+                    }))
                     .addOnFailureListener(e -> {
                         progressBar.setVisibility(View.GONE);
                         Toast.makeText(RegisterActivity.this, "Error al subir la imagen: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     });
         }
+    }
+
+    // Método para redirigir a la actividad principal
+    private void redirectToMainActivity() {
+        Intent intent = new Intent(RegisterActivity.this, MainActivity.class); // Cambia MainActivity si es necesario
+        startActivity(intent);
+        finish();
     }
 }

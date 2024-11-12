@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-class WhileFragment extends Fragment {
+public class WhileFragment extends Fragment {
 
     @Nullable
     @Override
