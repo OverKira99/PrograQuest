@@ -18,4 +18,8 @@ public class IfFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_if, container, false);
     }
+    public IfFragment() {
+        // Constructor público vacío necesario para recreación del sistema.
+    }
+
 }
