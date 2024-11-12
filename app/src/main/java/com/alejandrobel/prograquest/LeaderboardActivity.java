@@ -1,12 +1,10 @@
 package com.alejandrobel.prograquest;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 import java.util.List;
@@ -30,7 +28,6 @@ public class LeaderboardActivity extends AppCompatActivity {
         listViewScores = findViewById(R.id.listViewScores);
         spinnerTopics = findViewById(R.id.spinnerTopics);
 
-        // Configurar el spinner
         spinnerTopics.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -40,7 +37,7 @@ public class LeaderboardActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // No hacer nada
+                // No action needed
             }
         });
     }
