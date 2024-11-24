@@ -164,17 +164,12 @@ public class EvaluationFragment extends Fragment {
     private void displayQuestion() {
         if (currentQuestionIndex < currentQuestions.size()) {
             Question question = currentQuestions.get(currentQuestionIndex);
-
-            Log.d("DisplayQuestion", "Pregunta actual: " + question.getQuestion());
-            Log.d("DisplayQuestion", "Opciones: " + question.getAnswers().toString());
-
             questionTextView.setText(question.getQuestion());
 
             answerRadioGroup.removeAllViews();
 
             List<String> answers = question.getAnswers();
             if (answers.isEmpty()) {
-                Log.e("DisplayQuestion", "No hay opciones para la pregunta actual");
                 Toast.makeText(getContext(), "No hay opciones disponibles", Toast.LENGTH_SHORT).show();
                 return;
             }

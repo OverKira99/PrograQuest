@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:background="@color/lessiones"
         app:itemBackground="@drawable/nav_item_background"
-        app:itemIconTint="@color/azul_oscuro"
+
         app:itemTextColor="@color/black"
         app:itemRippleColor="@color/white"
         android:backgroundTint="@color/blue"
