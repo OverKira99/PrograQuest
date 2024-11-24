@@ -36,7 +36,7 @@ public class LoadScreenActivity extends AppCompatActivity {
         logoImageView.setClipToOutline(true);
 
         // Apply 3D effect
-        logoImageView.setElevation(8f);
+        logoImageView.setElevation(16f);
 
         // Animación de rotación para el logo
         ObjectAnimator rotation = ObjectAnimator.ofFloat(logoImageView, "rotation", 0f, 360f);

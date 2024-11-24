@@ -45,16 +45,16 @@ public class ProfileFragment extends Fragment {
         buttonChangeImage = view.findViewById(R.id.buttonChangeImage);
         buttonLogout = view.findViewById(R.id.buttonLogout);
         buttonLeaderboard = view.findViewById(R.id.buttonLeaderboard);
-        
+
 
         // Cargar datos y configurar listeners
         loadProfileData();
-
         buttonChangeImage.setOnClickListener(v -> openFileChooser());
         buttonLogout.setOnClickListener(v -> logout());
 
         return view;
     }
+
 
     private void loadProfileData() {
         // Configurar la lógica de cargar perfil
@@ -69,4 +69,5 @@ public class ProfileFragment extends Fragment {
         startActivity(new Intent(getContext(), LoginActivity.class));
         requireActivity().finish();
     }
+
 }

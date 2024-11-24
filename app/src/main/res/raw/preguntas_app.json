@@ -4,52 +4,42 @@
     "questions": [
       {
         "question": "¿Cuál es la estructura correcta de una sentencia `if` en Java?",
-        "options": [
-          "if {condición} {}",
-          "if (condición) {}",
-          "if condición {}",
-          "if [condición] {}"
-        ],
+        "option1": "if {condición} {}",
+        "option2": "if (condición) {}",
+        "option3": "if condición {}",
+        "option4": "if [condición] {}",
         "correctOption": "if (condición) {}"
       },
       {
         "question": "En Python, ¿cómo se define el bloque de código que sigue a un `if`?",
-        "options": [
-          "Con llaves {}",
-          "Con paréntesis ()",
-          "Con indentación",
-          "Con corchetes []"
-        ],
+        "option1": "Con llaves {}",
+        "option2": "Con paréntesis ()",
+        "option3": "Con indentación",
+        "option4": "Con corchetes []",
         "correctOption": "Con indentación"
       },
       {
         "question": "¿Qué sucede si no se utilizan llaves en un `if` en Java con varias líneas de código?",
-        "options": [
-          "Solo se ejecuta la primera línea del bloque.",
-          "Se genera un error de compilación.",
-          "El código no se ejecuta.",
-          "Todas las líneas se ejecutan correctamente."
-        ],
+        "option1": "Solo se ejecuta la primera línea del bloque.",
+        "option2": "Se genera un error de compilación.",
+        "option3": "El código no se ejecuta.",
+        "option4": "Todas las líneas se ejecutan correctamente.",
         "correctOption": "Solo se ejecuta la primera línea del bloque."
       },
       {
         "question": "¿Cuál es un error común en Python al usar `if`?",
-        "options": [
-          "Usar indentación uniforme.",
-          "No utilizar `:` al final de la línea `if`.",
-          "No usar paréntesis en la condición.",
-          "Usar `elif` en lugar de `else if`."
-        ],
+        "option1": "Usar indentación uniforme.",
+        "option2": "No utilizar `:` al final de la línea `if`.",
+        "option3": "No usar paréntesis en la condición.",
+        "option4": "Usar `elif` en lugar de `else if`.",
         "correctOption": "No utilizar `:` al final de la línea `if`."
       },
       {
         "question": "¿Cuál es la principal diferencia entre `if` en Java y Python?",
-        "options": [
-          "Java requiere paréntesis y llaves; Python usa indentación.",
-          "Python requiere paréntesis y Java no.",
-          "Java no necesita llaves.",
-          "Python no soporta condiciones complejas."
-        ],
+        "option1": "Java requiere paréntesis y llaves; Python usa indentación.",
+        "option2": "Python requiere paréntesis y Java no.",
+        "option3": "Java no necesita llaves.",
+        "option4": "Python no soporta condiciones complejas.",
         "correctOption": "Java requiere paréntesis y llaves; Python usa indentación."
       }
     ]
@@ -59,52 +49,42 @@
     "questions": [
       {
         "question": "¿Cómo se define un bucle `for` tradicional en Java?",
-        "options": [
-          "for variable in secuencia:",
-          "for variable in range(n):",
-          "for (inicialización; condición; incremento) {}",
-          "for {inicialización; condición; incremento}"
-        ],
+        "option1": "for variable in secuencia:",
+        "option2": "for variable in range(n):",
+        "option3": "for (inicialización; condición; incremento) {}",
+        "option4": "for {inicialización; condición; incremento}",
         "correctOption": "for (inicialización; condición; incremento) {}"
       },
       {
         "question": "En Python, ¿cómo se usa un bucle `for` para recorrer una lista?",
-        "options": [
-          "for (int i = 0; i < lista.length; i++)",
-          "for item in lista:",
-          "for lista in item:",
-          "for each item in lista:"
-        ],
+        "option1": "for (int i = 0; i < lista.length; i++)",
+        "option2": "for item in lista:",
+        "option3": "for lista in item:",
+        "option4": "for each item in lista:",
         "correctOption": "for item in lista:"
       },
       {
         "question": "¿Qué sucede si olvidamos incrementar la variable de control en un bucle `for` en Java?",
-        "options": [
-          "El bucle se ejecuta solo una vez.",
-          "Se produce un bucle infinito.",
-          "El bucle no se ejecuta.",
-          "Se genera un error de compilación."
-        ],
+        "option1": "El bucle se ejecuta solo una vez.",
+        "option2": "Se produce un bucle infinito.",
+        "option3": "El bucle no se ejecuta.",
+        "option4": "Se genera un error de compilación.",
         "correctOption": "Se produce un bucle infinito."
       },
       {
         "question": "¿Qué función se utiliza comúnmente con `for` en Python para generar una secuencia de números?",
-        "options": [
-          "list()",
-          "range()",
-          "sequence()",
-          "loop()"
-        ],
+        "option1": "list()",
+        "option2": "range()",
+        "option3": "sequence()",
+        "option4": "loop()",
         "correctOption": "range()"
       },
       {
         "question": "¿Cuál es una diferencia clave entre `for` en Java y Python?",
-        "options": [
-          "Java no soporta bucles `for`.",
-          "En Python se usa `for variable in secuencia`, mientras que en Java se usa una estructura más detallada con `inicialización`, `condición` e `incremento`.",
-          "Python requiere paréntesis en `for`.",
-          "Java requiere indentación en los bloques."
-        ],
+        "option1": "Java no soporta bucles `for`.",
+        "option2": "En Python se usa `for variable in secuencia`, mientras que en Java se usa una estructura más detallada con `inicialización`, `condición` e `incremento`.",
+        "option3": "Python requiere paréntesis en `for`.",
+        "option4": "Java requiere indentación en los bloques.",
         "correctOption": "En Python se usa `for variable in secuencia`, mientras que en Java se usa una estructura más detallada con `inicialización`, `condición` e `incremento`."
       }
     ]
@@ -114,52 +94,42 @@
     "questions": [
       {
         "question": "¿Cuál es la sintaxis correcta de un bucle `while` en Java?",
-        "options": [
-          "while condición:",
-          "while {condición}",
-          "while (condición) {}",
-          "while condición {}"
-        ],
+        "option1": "while condición:",
+        "option2": "while {condición}",
+        "option3": "while (condición) {}",
+        "option4": "while condición {}",
         "correctOption": "while (condición) {}"
       },
       {
         "question": "En Python, ¿qué se necesita para iniciar un bloque de código dentro de un `while`?",
-        "options": [
-          "Una línea con `:` seguida de un bloque indentado.",
-          "Llaves {} para delimitar el bloque.",
-          "Una línea de comentarios.",
-          "Paréntesis () alrededor de la condición."
-        ],
+        "option1": "Una línea con `:` seguida de un bloque indentado.",
+        "option2": "Llaves {} para delimitar el bloque.",
+        "option3": "Una línea de comentarios.",
+        "option4": "Paréntesis () alrededor de la condición.",
         "correctOption": "Una línea con `:` seguida de un bloque indentado."
       },
       {
         "question": "¿Qué sucede si la condición en un bucle `while` nunca cambia a `false`?",
-        "options": [
-          "Se produce un bucle infinito.",
-          "El programa se detiene.",
-          "El bucle no se ejecuta.",
-          "Se genera un error de compilación."
-        ],
+        "option1": "Se produce un bucle infinito.",
+        "option2": "El programa se detiene.",
+        "option3": "El bucle no se ejecuta.",
+        "option4": "Se genera un error de compilación.",
         "correctOption": "Se produce un bucle infinito."
       },
       {
         "question": "¿Qué tipo de error se genera en Python si la indentación dentro de un `while` no es consistente?",
-        "options": [
-          "SyntaxError",
-          "ValueError",
-          "TypeError",
-          "IndentationError"
-        ],
+        "option1": "SyntaxError",
+        "option2": "ValueError",
+        "option3": "TypeError",
+        "option4": "IndentationError",
         "correctOption": "IndentationError"
       },
       {
         "question": "¿Cuál es una diferencia clave entre `while` en Java y Python?",
-        "options": [
-          "En Java se requiere `:` al final de la condición.",
-          "Java utiliza llaves {} para los bloques, mientras que Python usa indentación.",
-          "Python no admite bucles `while`.",
-          "Java no admite condiciones complejas en `while`."
-        ],
+        "option1": "En Java se requiere `:` al final de la condición.",
+        "option2": "Java utiliza llaves {} para los bloques, mientras que Python usa indentación.",
+        "option3": "Python no admite bucles `while`.",
+        "option4": "Java no admite condiciones complejas en `while`.",
         "correctOption": "Java utiliza llaves {} para los bloques, mientras que Python usa indentación."
       }
     ]
@@ -169,52 +139,42 @@
     "questions": [
       {
         "question": "¿Cuál es la estructura básica de un `switch` en Java?",
-        "options": [
-          "switch (expresión) { case valor: ... break; }",
-          "switch { expresión; case valor: ... }",
-          "switch (condición) { if valor: ... }",
-          "switch: case valor: ..."
-        ],
+        "option1": "switch (expresión) { case valor: ... break; }",
+        "option2": "switch { expresión; case valor: ... }",
+        "option3": "switch (condición) { if valor: ... }",
+        "option4": "switch: case valor: ...",
         "correctOption": "switch (expresión) { case valor: ... break; }"
       },
       {
         "question": "En Java, ¿qué sucede si se omite el `break` en un `case`?",
-        "options": [
-          "Se genera un error de compilación.",
-          "Continúa ejecutando los siguientes `case` hasta encontrar un `break` o finalizar el bloque.",
-          "Solo se ejecuta el bloque del `case` correspondiente.",
-          "El `default` se ejecuta automáticamente."
-        ],
+        "option1": "Se genera un error de compilación.",
+        "option2": "Continúa ejecutando los siguientes `case` hasta encontrar un `break` o finalizar el bloque.",
+        "option3": "Solo se ejecuta el bloque del `case` correspondiente.",
+        "option4": "El `default` se ejecuta automáticamente.",
         "correctOption": "Continúa ejecutando los siguientes `case` hasta encontrar un `break` o finalizar el bloque."
       },
       {
         "question": "¿Cuál es una alternativa al `switch` en Python?",
-        "options": [
-          "Usar `case-switch` nativo.",
-          "for en lugar de `switch`.",
-          "Usar `if-elif-else` o diccionarios de funciones.",
-          "switch solo está disponible en bibliotecas externas."
-        ],
+        "option1": "Usar `case-switch` nativo.",
+        "option2": "for en lugar de `switch`.",
+        "option3": "Usar `if-elif-else` o diccionarios de funciones.",
+        "option4": "switch solo está disponible en bibliotecas externas.",
         "correctOption": "Usar `if-elif-else` o diccionarios de funciones."
       },
       {
         "question": "¿Cuál es un error común al usar `switch` en Java?",
-        "options": [
-          "No incluir un `break` después de cada `case`.",
-          "No usar llaves {} alrededor de cada `case`.",
-          "Usar `default` más de una vez.",
-          "No se pueden usar valores enteros en el `switch`."
-        ],
+        "option1": "No incluir un `break` después de cada `case`.",
+        "option1": "No usar llaves {} alrededor de cada `case`.",
+        "option1": "Usar `default` más de una vez.",
+        "option1": "No se pueden usar valores enteros en el `switch`.",
         "correctOption": "No incluir un `break` después de cada `case`."
       },
       {
         "question": "¿Qué característica no existe en Python relacionada con `switch`?",
-        "options": [
-          "if-elif-else para estructuras condicionales.",
-          "Diccionarios para reemplazar `switch`.",
-          "Sentencia `switch` nativa.",
-          "try-except para manejar errores en `switch`."
-        ],
+        "option1": "if-elif-else para estructuras condicionales.",
+        "option1": "Diccionarios para reemplazar `switch`.",
+        "option1": "Sentencia `switch` nativa.",
+        "option1": "try-except para manejar errores en `switch`.",
         "correctOption": "Sentencia `switch` nativa."
       }
     ]

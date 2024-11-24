@@ -1,6 +1,8 @@
 package com.alejandrobel.prograquest;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +61,6 @@ public class EvaluationFragment extends Fragment {
         try {
             InputStream inputStream = getResources().openRawResource(R.raw.preguntas_app);
             InputStreamReader reader = new InputStreamReader(inputStream);
-
             Gson gson = new Gson();
             Type listType = new TypeToken<List<QuestionSet>>() {}.getType();
             questionSets = gson.fromJson(reader, listType);
@@ -124,12 +125,27 @@ public class EvaluationFragment extends Fragment {
     private void displayQuestion() {
         if (currentQuestionIndex < currentQuestions.size()) {
             Question question = currentQuestions.get(currentQuestionIndex);
+
+            Log.d("DisplayQuestion", "Pregunta actual: " + question.getQuestion());
+            Log.d("DisplayQuestion", "Opciones: " + question.getAnswers().toString());
+
             questionTextView.setText(question.getQuestion());
 
             answerRadioGroup.removeAllViews();
-            for (String answer : question.getAnswers()) {
+
+            List<String> answers = question.getAnswers();
+            if (answers.isEmpty()) {
+                Log.e("DisplayQuestion", "No hay opciones para la pregunta actual");
+                Toast.makeText(getContext(), "No hay opciones disponibles", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            for (String answer : answers) {
                 RadioButton rb = new RadioButton(getContext());
                 rb.setText(answer);
+                rb.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.black)));
+                rb.setTextColor(getResources().getColor(android.R.color.black));
+                rb.setTextSize(16); // Ajusta el tamaño del texto si es necesario
                 answerRadioGroup.addView(rb);
             }
 

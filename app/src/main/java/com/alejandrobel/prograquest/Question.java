@@ -16,6 +16,7 @@ public class Question {
     private String option1;
     private String option2;
     private String option3;
+    private String option4;
     private String correctOption;
     private String topic; // Campo para almacenar el tema
 
@@ -23,13 +24,16 @@ public class Question {
     public Question() {
     }
 
+
+
     // Constructor completo
-    public Question(String question, String codeExample, String option1, String option2, String option3, String correctOption, String topic) {
+    public Question(String question, String codeExample, String option1, String option2, String option3,String option4, String correctOption, String topic) {
         this.question = question;
         this.codeExample = codeExample;
         this.option1 = option1;
         this.option2 = option2;
         this.option3 = option3;
+        this.option4 = option4;
         this.correctOption = correctOption;
         this.topic = topic;
     }
@@ -84,6 +88,13 @@ public class Question {
     public void setOption3(String option3) {
         this.option3 = option3;
     }
+    public String getOption4() {
+        return option4;
+    }
+
+    public void setOption4(String option4) {
+        this.option4 = option4;
+    }
 
     public String getCorrectOption() {
         return correctOption;
@@ -103,9 +114,10 @@ public class Question {
 
     public List<String> getAnswers() {
         List<String> answers = new ArrayList<>();
-        if (option1 != null) answers.add(option1);
-        if (option2 != null) answers.add(option2);
-        if (option3 != null) answers.add(option3);
+        if (option1 != null && !option1.isEmpty()) answers.add(option1);
+        if (option2 != null && !option2.isEmpty()) answers.add(option2);
+        if (option3 != null && !option3.isEmpty()) answers.add(option3);
+        if (option4 != null && !option4.isEmpty()) answers.add(option4);
         return answers;
     }
 }
