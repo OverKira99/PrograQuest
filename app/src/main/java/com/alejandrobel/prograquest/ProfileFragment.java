@@ -45,7 +45,7 @@ public class ProfileFragment extends Fragment {
         buttonChangeImage = view.findViewById(R.id.buttonChangeImage);
         buttonLogout = view.findViewById(R.id.buttonLogout);
         buttonLeaderboard = view.findViewById(R.id.buttonLeaderboard);
-        switchTheme = view.findViewById(R.id.switchTheme);
+        
 
         // Cargar datos y configurar listeners
         loadProfileData();

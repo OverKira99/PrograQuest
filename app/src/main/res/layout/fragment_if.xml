@@ -21,6 +21,7 @@
                 android:id="@+id/textViewTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="@string/sentencias_condicionales_if"
                 android:textSize="24sp"
@@ -35,6 +36,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="@string/_1_introducci_n_las_sentencias_if_permiten_ejecutar_un_bloque_de_c_digo_solo_si_se_cumple_una_determinada_condici_n_l_gica_son_fundamentales_en_la_toma_de_decisiones_dentro_de_cualquier_programa_su_correcto_uso_asegura_un_flujo_de_control_eficiente_y_predecible"
                 android:textSize="16sp" />
@@ -47,6 +49,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="@string/_2_sentencia_if_en_java_en_java_una_sentencia_if_sigue_esta_estructura_b_sica"
                 android:textSize="16sp" />
@@ -62,6 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+                android:textColor="@color/black"
                 android:text="@string/el_bloque_de_c_digo_dentro_del_if_se_ejecutar_solo_si_la_condici_n_l_gica_evaluada_entre_par_ntesis_es_true_por_ejemplo_si_declaramos_una_variable_int_x_10_y_comprobamos_if_x_5_el_mensaje_asociado_se_imprimir_porque_la_condici_n_es_verdadera"
                 android:textSize="16sp" />
 
@@ -69,6 +73,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="@string/un_error_com_n_en_java_es_omitir_los_par_ntesis_en_la_condici_n_lo_que_generar_un_error_de_compilaci_n_otro_problema_puede_surgir_si_no_se_utilizan_llaves_cuando_el_bloque_contiene_m_s_de_una_l_nea_de_c_digo_en_este_caso_solo_la_primera_l_nea_se_considerar_dentro_del_if_lo_que_puede_causar_comportamientos_inesperados"
                 android:textSize="16sp" />
@@ -76,6 +81,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="@string/_3_sentencia_if_en_python_en_python_la_sentencia_if_tiene_una_estructura_m_s_concisa"
                 android:textSize="16sp" />
@@ -90,6 +96,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="@string/aqu_no_es_obligatorio_usar_par_ntesis_alrededor_de_la_condici_n_aunque_se_permiten_el_bloque_de_c_digo_se_define_mediante_la_indentaci_n_lo_que_mejora_la_legibilidad_por_ejemplo_si_se_declara_x_10_y_luego_se_eval_a_if_x_5_el_mensaje_se_imprimir_porque_la_condici_n_es_verdadera"
                 android:textSize="16sp" />
@@ -97,6 +104,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="@string/un_error_com_n_en_python_es_no_respetar_la_indentaci_n_lo_que_genera_un_indentationerror_adem_s_si_se_olvida_usar_al_final_de_la_l_nea_if_se_obtendr_un_error_de_sintaxis_es_crucial_mantener_una_indentaci_n_consistente_en_todo_el_bloque_ya_que_incluso_un_espacio_o_tabulaci_n_extra_puede_generar_errores"
                 android:textSize="16sp" />
@@ -110,6 +118,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="@string/en_java_errores_comunes_incluyen_no_usar_par_ntesis_en_la_condici_n_omitir_las_llaves_en_bloques_con_m_ltiples_l_neas"
                 android:textSize="16sp" />
@@ -117,6 +126,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="@string/en_python_los_errores_m_s_frecuentes_son_indentaci_n_inconsistente_o_ausente_falta_del_car_cter_despu_s_de_la_condici_n_mezclar_espacios_y_tabulaciones_en_la_indentaci_n"
                 android:textSize="16sp" />

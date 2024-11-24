@@ -31,6 +31,7 @@
                 android:id="@+id/textViewEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/correo_del_usuario"
                 android:layout_marginBottom="16dp"
                 android:textSize="18sp" />
@@ -40,22 +41,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/blue"
+                android:textColorHint="@color/black"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:text="@string/cambiar_imagen"
-                android:layout_marginBottom="16dp" />
-
-            <Switch
-                android:id="@+id/switchTheme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/modo_oscuro"
                 android:layout_marginBottom="16dp" />
 
             <Button
                 android:id="@+id/buttonLeaderboard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:text="@string/ver_tabla_de_clasificaciones"
@@ -66,6 +62,7 @@
                 android:id="@+id/buttonLogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:backgroundTint="@color/blue"

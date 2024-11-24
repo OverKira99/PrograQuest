@@ -15,6 +15,7 @@
         android:id="@+id/questionTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:layout_marginBottom="16dp" />
 

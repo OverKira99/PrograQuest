@@ -3,8 +3,11 @@ package com.alejandrobel.prograquest;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.graphics.Outline;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +26,17 @@ public class LoadScreenActivity extends AppCompatActivity {
 
         ImageView logoImageView = findViewById(R.id.logoImageView);
         TextView loadingTextView = findViewById(R.id.loadingTextView);
+
+        logoImageView.setOutlineProvider(new ViewOutlineProvider() {
+            @Override
+            public void getOutline(View view, Outline outline) {
+                outline.setRoundRect(0, 0, view.getWidth(), view.getHeight(), 20f);
+            }
+        });
+        logoImageView.setClipToOutline(true);
+
+        // Apply 3D effect
+        logoImageView.setElevation(8f);
 
         // Animación de rotación para el logo
         ObjectAnimator rotation = ObjectAnimator.ofFloat(logoImageView, "rotation", 0f, 360f);
