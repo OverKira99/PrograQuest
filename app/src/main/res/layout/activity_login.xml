@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/lessiones"
     android:gravity="center"
     android:padding="16dp"
     tools:context=".LoginActivity">
@@ -30,7 +31,8 @@
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Correo electrónico o usuario"
+        android:textColorHint="@color/black"
+        android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
         android:layout_marginBottom="16dp"
         android:padding="12dp"
@@ -40,6 +42,7 @@
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/black"
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:layout_marginBottom="16dp"
@@ -52,7 +55,7 @@
         android:layout_height="wrap_content"
         android:text="Iniciar sesión"
         android:backgroundTint="@color/blue"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_marginBottom="16dp" />
 
     <Button
@@ -61,7 +64,7 @@
         android:layout_height="wrap_content"
         android:text="Crear cuenta"
         android:backgroundTint="@color/blue"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_marginBottom="16dp" />
 
     <ProgressBar

@@ -9,7 +9,9 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:targetApi="29" />
-
+    <meta-data
+        android:name="AccessoryServicesLocation"
+        android:value="YOUR_VALUE" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrograQuest"
         android:name=".MyApp"
+        android:hardwareAccelerated="true"
         tools:targetApi="31">
 
 
@@ -36,7 +39,6 @@
 
 
         <activity android:name=".LeaderboardActivity" android:exported="false" />
-        <activity android:name=".LessonsAdapter" android:exported="false" />
         <activity android:name=".RegisterActivity" android:exported="false" />
         <activity android:name=".LoginActivity" android:exported="false" />
         <activity android:name=".MainActivity" android:exported="false" />

@@ -46,10 +46,11 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     //firebase
-    implementation ("com.google.firebase:firebase-database:20.2.0")
-    implementation ("com.google.firebase:firebase-bom:32.0.0")
-    implementation ("com.google.firebase:firebase-appcheck")
-    implementation ("com.google.firebase:firebase-appcheck-debug")
+    implementation ("com.google.firebase:firebase-database:20.2.2")
+    implementation ("com.google.firebase:firebase-bom:32.3.1")
+    implementation ("com.google.firebase:firebase-appcheck:16.1.1")
+    implementation ("com.google.firebase:firebase-core:21.1.1")
+    implementation ("com.google.firebase:firebase-appcheck-playintegrity:16.1.0")
 
     //configuracion de glide para las imagenes
     implementation ("com.github.bumptech.glide:glide:4.12.0")
@@ -57,6 +58,6 @@ dependencies {
     //configuracion del room base de datos local
     implementation ("androidx.room:room-runtime:2.5.1")
     annotationProcessor ("androidx.room:room-compiler:2.5.1")
-    //lecto de .json
+    //lector de .json
     implementation ("com.google.code.gson:gson:2.9.0")
 }

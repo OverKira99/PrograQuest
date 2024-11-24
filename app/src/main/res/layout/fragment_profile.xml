@@ -23,7 +23,7 @@
                 android:id="@+id/imageProfile"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-
+                android:src="@drawable/profile"
                 android:contentDescription="@string/imagen_de_perfil"
                 android:layout_marginBottom="16dp" />
 

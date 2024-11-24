@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
-    android:background="@color/blue">
+    android:background="@color/lessiones">
 
 
         <!-- Título de la sección -->

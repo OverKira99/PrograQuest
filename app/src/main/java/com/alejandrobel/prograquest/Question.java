@@ -3,12 +3,14 @@ package com.alejandrobel.prograquest;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity(tableName = "questions")
 public class Question {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
-
     private String question;
     private String codeExample;
     private String option1;
@@ -97,5 +99,13 @@ public class Question {
 
     public void setTopic(String topic) {
         this.topic = topic;
+    }
+
+    public List<String> getAnswers() {
+        List<String> answers = new ArrayList<>();
+        if (option1 != null) answers.add(option1);
+        if (option2 != null) answers.add(option2);
+        if (option3 != null) answers.add(option3);
+        return answers;
     }
 }

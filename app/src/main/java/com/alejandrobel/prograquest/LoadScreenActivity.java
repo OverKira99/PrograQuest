@@ -42,7 +42,7 @@ public class LoadScreenActivity extends AppCompatActivity {
             Intent intent = new Intent(LoadScreenActivity.this, LoginActivity.class);
             startActivity(intent);
             finish(); // Cierra la actividad de splash para que no vuelva al retroceder.
-        }, 2000); // 3 segundos de espera
+        }, 3000); // 3 segundos de espera
     }
 
 }
