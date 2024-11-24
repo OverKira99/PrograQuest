@@ -18,6 +18,10 @@ public class Score {
         this.topic = topic;
     }
 
+    public Score() {
+
+    }
+
     public int getId() {
         return id;
     }

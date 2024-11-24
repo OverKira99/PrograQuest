@@ -16,6 +16,5 @@ public interface ScoreDao {
     @Query("SELECT * FROM scores WHERE topic = :topic ORDER BY score DESC")
     List<Score> getScoresByTopic(String topic);
 
-    @Query("SELECT * FROM scores ORDER BY score DESC LIMIT 10")
-    List<Score> getTopScores();
+
 }

@@ -148,11 +148,13 @@
     <string name="en_python_un_error_com_n_es_intentar_modificar_la_secuencia_directamente_dentro_del_bucle_lo_que_puede_llevar_a_resultados_inesperados_adem_s_al_igual_que_con_el_if_se_debe_mantener_una_indentaci_n_consistente_de_lo_contrario_se_generar_un_indentationerror">En Python, un error común es intentar modificar la secuencia directamente dentro del bucle, lo que puede llevar a resultados inesperados. Además, al igual que con el if, se debe mantener una indentación consistente; de lo contrario, se generará un IndentationError.</string>
     <string name="en_java_los_errores_m_s_comunes_incluyen_olvidar_actualizar_la_variable_de_control_generando_un_bucle_infinito_configurar_incorrectamente_la_condici_n_lo_que_puede_llevar_a_iteraciones_no_deseadas">En Java, los errores más comunes incluyen: Olvidar actualizar la variable de control, generando un bucle infinito. Configurar incorrectamente la condición, lo que puede llevar a iteraciones no deseadas.</string>
     <string name="en_python_los_errores_frecuentes_son_no_usar_la_funci_n_range_correctamente_mezclar_espacios_y_tabulaciones_en_la_indentaci_n_intentar_modificar_la_secuencia_sobre_la_que_se_est_iterando">En Python, los errores frecuentes son: No usar la función range() correctamente. Mezclar espacios y tabulaciones en la indentación. Intentar modificar la secuencia sobre la que se está iterando.</string>
-    <string name="tabla_de_clasificaci_n">Tabla de Clasificación</string>
     <string name="confirmar_contrase_a">Confirmar contraseña</string>
     <string name="contrase_a">Contraseña</string>
     <string name="correo_electr_nico">Correo electrónico</string>
     <string name="registrarse">Registrarse</string>
     <string name="seleccionar_imagen">Seleccionar Imagen</string>
     <string name="siguiente">Siguiente</string>
+    <string name="tabla_de_resultados">Tabla de Resultados</string>
+    <string name="atr_s">Atrás</string>
+    <string name="reiniciar_evaluacion">Reiniciar Evaluacion</string>
 </resources>

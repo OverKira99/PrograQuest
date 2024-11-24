@@ -164,17 +164,17 @@
       {
         "question": "¿Cuál es un error común al usar `switch` en Java?",
         "option1": "No incluir un `break` después de cada `case`.",
-        "option1": "No usar llaves {} alrededor de cada `case`.",
-        "option1": "Usar `default` más de una vez.",
-        "option1": "No se pueden usar valores enteros en el `switch`.",
+        "option2": "No usar llaves {} alrededor de cada `case`.",
+        "option3": "Usar `default` más de una vez.",
+        "option4": "No se pueden usar valores enteros en el `switch`.",
         "correctOption": "No incluir un `break` después de cada `case`."
       },
       {
         "question": "¿Qué característica no existe en Python relacionada con `switch`?",
         "option1": "if-elif-else para estructuras condicionales.",
-        "option1": "Diccionarios para reemplazar `switch`.",
-        "option1": "Sentencia `switch` nativa.",
-        "option1": "try-except para manejar errores en `switch`.",
+        "option2": "Diccionarios para reemplazar `switch`.",
+        "option3": "Sentencia `switch` nativa.",
+        "option4": "try-except para manejar errores en `switch`.",
         "correctOption": "Sentencia `switch` nativa."
       }
     ]

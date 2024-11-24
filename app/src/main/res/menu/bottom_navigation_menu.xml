@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_lessons"
-        android:title="Lessons"
+        android:title="Lecciones"
         android:icon="@drawable/lesson" />
     <item
         android:id="@+id/nav_evaluation"
-        android:title="Evaluation"
+        android:title="Evaluacion"
         android:icon="@drawable/evaluation" />
 
     <item
         android:id="@+id/nav_profile"
-        android:title="Profile"
+        android:title="Perfil"
         android:icon="@drawable/profile" />
 </menu>

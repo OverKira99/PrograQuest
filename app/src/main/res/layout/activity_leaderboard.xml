@@ -3,37 +3,58 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center"
-    android:background="@color/lessiones">
+    android:background="@color/lessiones"
+    android:orientation="vertical">
 
-
-        <!-- Título de la sección -->
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:elevation="4dp"
+        android:theme="@style/ToolbarStyle"
+        android:minHeight="?attr/actionBarSize">
         <TextView
-            android:id="@+id/textViewLeaderboardTitle"
+            android:id="@+id/backText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/atr_s"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@android:color/black"
+            android:padding="16dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Contenido principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tabla_de_clasificaci_n"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:text="@string/tabla_de_resultados"
+            android:textSize="18sp"
             android:gravity="center"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:textStyle="bold" />
 
-        <!-- Filtro por tema -->
         <Spinner
             android:id="@+id/spinnerTopics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:entries="@array/topics_array" />
+            android:layout_marginBottom="16dp" />
 
-        <!-- Lista de puntajes -->
         <ListView
             android:id="@+id/listViewScores"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:divider="@android:color/darker_gray"
+            android:layout_height="match_parent"
             android:dividerHeight="1dp"
-            android:padding="8dp" />
+            android:divider="@android:color/darker_gray" />
+
+    </LinearLayout>
 </LinearLayout>
